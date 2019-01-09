@@ -4,6 +4,10 @@ import { connect } from "react-redux";
 import { hideNav } from "../actions";
 
 function Navigation({ hideNav, navHidden }) {
+  function delayShowNav() {
+    setTimeout(() => hideNav(false), 1100);
+  }
+
   function handleScroll() {
     const scrollPos = window.pageYOffset;
     setTimeout(() => {
@@ -23,16 +27,16 @@ function Navigation({ hideNav, navHidden }) {
 
   return (
     <div className={`navigation${navHidden ? " hide" : ""}`}>
-      <Link to="about" smooth={true}>
+      <Link to="about" smooth={true} onClick={delayShowNav}>
         About
       </Link>
-      <Link to="services" smooth={true}>
+      <Link to="services" smooth={true} onClick={delayShowNav}>
         Services
       </Link>
-      <Link to="portfolio" smooth={true}>
+      <Link to="portfolio" smooth={true} onClick={delayShowNav}>
         Portfolio
       </Link>
-      <Link to="contact" smooth={true}>
+      <Link to="contact" smooth={true} onClick={delayShowNav}>
         Contact
       </Link>
     </div>
