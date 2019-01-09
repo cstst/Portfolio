@@ -3,7 +3,7 @@ import Section from "./Section";
 
 export default function Contact() {
   return (
-    <Section element="contact">
+    <Section element="contact" scrollButtonTo="landing" toTop={true}>
       <h1>Contact</h1>
     </Section>
   );

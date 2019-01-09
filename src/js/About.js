@@ -3,7 +3,7 @@ import Section from "./Section";
 
 export default function About() {
   return (
-    <Section element="about">
+    <Section element="about" scrollButtonTo="services">
       <h1>About</h1>
     </Section>
   );
