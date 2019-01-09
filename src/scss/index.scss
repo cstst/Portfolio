@@ -2,15 +2,31 @@ body {
   margin: 0;
 }
 
-.navigation {
-  position: fixed;
-  top: 0;
-  right: 0;
+.navbar {
+  display: flex;
+  justify-content: flex-end !important;
   border: 1px solid blue;
   z-index: 5;
   transition: top 0.5s;
   &.hide {
-    top: -50px;
+    top: -60px;
+  }
+}
+
+.navbar-toggler {
+  position: relative;
+  &:before {
+    content: "";
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 1.5em;
+    height: 0.15em;
+    background: blue;
+    border-radius: 2em;
+    box-shadow: 0 0.375em 0 0 blue, 0 0.75em 0 0 blue;
   }
 }
 
