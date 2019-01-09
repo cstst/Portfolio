@@ -3,7 +3,7 @@ import Section from "./Section";
 
 export default function Contact() {
   return (
-    <Section>
+    <Section element="contact">
       <h1>Contact</h1>
     </Section>
   );

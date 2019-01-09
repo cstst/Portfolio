@@ -3,7 +3,7 @@ import Section from "./Section";
 
 export default function Portfolio() {
   return (
-    <Section>
+    <Section element="portfolio">
       <h1>Portfolio</h1>
     </Section>
   );

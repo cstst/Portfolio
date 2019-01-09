@@ -3,7 +3,7 @@ import Section from "./Section";
 
 export default function Services() {
   return (
-    <Section>
+    <Section element="services">
       <h1>Services</h1>
     </Section>
   );
