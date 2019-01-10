@@ -10,7 +10,7 @@ function Secton({ element, scrollButtonTo, children, toTop, hideNav }) {
 
   return (
     <div className="section">
-      <Element name={element} />
+      <Element className="scroll-element" name={element} />
       {children}
       <Link
         className="scroll-link"
