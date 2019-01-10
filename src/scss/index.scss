@@ -1,16 +1,28 @@
-$font-color-1: white;
+@import "./_mixins";
 
-body {
-  margin: 0;
-  color: $font-color-1;
+$min_width: 320px;
+$max_width: 2560px;
+$min_font: 16px;
+$max_font: 36px;
+$font_color_1: white;
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
 
+body {
+  color: $font_color_1;
+  margin: 0;
+}
+h1 {
+  font-size: 2rem;
+}
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 10px;
+  padding: 0.5rem;
   display: flex;
   justify-content: flex-end;
   z-index: 5;
@@ -26,8 +38,8 @@ body {
     outline: none;
   }
   svg {
-    font-size: 1.75em;
-    color: $font-color-1;
+    font-size: 1.5em;
+    color: $font_color_1;
   }
 }
 
@@ -40,6 +52,15 @@ body {
   align-items: flex-end;
   @media screen and (min-width: 768px) {
     flex-direction: row;
+    li {
+      margin: 0 0.5rem;
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
   }
 }
 
@@ -49,7 +70,8 @@ body {
   width: 100%;
   background: black;
   border: 1px solid red;
-  padding: 10px 10px 70px 10px;
+  padding: 1rem;
+  padding-bottom: 3rem;
 }
 
 .scroll-element {
@@ -65,6 +87,6 @@ h1 {
 .scroll-link {
   position: absolute;
   left: 50%;
-  bottom: 20px;
+  bottom: 1rem;
   transform: translate(-50%, 0);
 }
